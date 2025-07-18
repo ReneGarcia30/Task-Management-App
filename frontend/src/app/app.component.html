@@ -1,0 +1,14 @@
+<nav class="bg-white shadow sticky top-0 z-10">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <span class="text-xl font-semibold text-blue-600">📝 To-Do App</span>
+    <div class="space-x-4">
+      <a routerLink="/" routerLinkActive="text-blue-600 font-bold" class="text-gray-700 hover:text-blue-500 transition">Home</a>
+      <a routerLink="/new-tab" routerLinkActive="text-blue-600 font-bold" class="text-gray-700 hover:text-blue-500 transition">About</a>
+      <a routerLink="/todo" routerLinkActive="text-blue-600 font-bold" class="text-gray-700 hover:text-blue-500 transition">To-Do</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-4xl mx-auto px-4 mt-10">
+  <router-outlet></router-outlet>
+</main>

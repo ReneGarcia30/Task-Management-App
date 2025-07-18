@@ -1,0 +1,19 @@
+<div class="bg-white shadow-md rounded-lg p-8 text-center">
+<h2>To-Do List</h2>
+
+<input [(ngModel)]="newTodo" placeholder="Add new task" />
+<button (click)="addTodo()">Add</button>
+<ul class="mt-4 space-y-2">
+  <li *ngFor="let todo of todos; index as i" class="flex items-center justify-between bg-white p-3 rounded shadow">
+    <span [class.line-through]="todo.completed" [class.text-gray-400]="todo.completed">
+      {{ todo.text }}
+    </span>
+    <button
+      class="text-sm px-3 py-1 rounded bg-green-100 text-green-700 hover:bg-green-200 transition"
+      (click)="markCompleted(i)">
+      {{ todo.completed ? 'Undo' : 'Completed' }}
+    </button>
+  </li>
+</ul>
+
+</div>
